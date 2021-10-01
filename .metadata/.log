@@ -1,0 +1,39 @@
+!SESSION 2021-09-23 16:50:23.447 -----------------------------------------------
+eclipse.buildId=Version 1.7.0
+java.version=11.0.10
+java.vendor=AdoptOpenJDK
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=sk_SK
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2021-09-23 16:52:24.038
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2021-09-23 16:52:24.114
+!MESSAGE Log4j initialized with config file C:\MKSCV01\MKSCV01\.metadata\.log4j.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2021-09-23 16:52:31.047
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.core 1 0 2021-09-23 17:14:41.476
+!MESSAGE Indexed 'cv01' (3 sources, 53 headers) in 1.35 sec: 1,964 declarations; 2,809 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.042%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2021-09-23 17:21:36.867
+!MESSAGE Indexed 'cv01' (3 sources, 53 headers) in 0.439 sec: 1,964 declarations; 2,809 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.042%)
+!SESSION 2021-09-30 10:40:46.946 -----------------------------------------------
+eclipse.buildId=Version 1.7.0
+java.version=11.0.10
+java.vendor=AdoptOpenJDK
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=sk_SK
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2021-09-30 10:40:58.475
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2021-09-30 10:40:58.710
+!MESSAGE Log4j initialized with config file C:\MKSCV01\MKSCV01\.metadata\.log4j.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2021-09-30 10:41:09.005
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.core 1 0 2021-09-30 10:41:44.615
+!MESSAGE Indexed 'cv02' (4 sources, 6 headers) in 0,609 sec: 425 declarations; 595 references; 12 unresolved inclusions; 9 syntax errors; 318 unresolved names (24 %)

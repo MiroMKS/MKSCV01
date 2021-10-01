@@ -1,0 +1,245 @@
+11:24:15 **** Build of configuration Debug for project cv02 ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DSTM32F030R8Tx -DSTM32 -DSTM32F0 -DNUCLEO_F030R8 -c -I../Inc -I"C:/MKSCV01/MKSCV01/cv02/CMSIS/Device/ST/STM32F0xx/Include" -I"C:/MKSCV01/MKSCV01/cv02/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DSTM32F030R8Tx -DSTM32 -DSTM32F0 -DNUCLEO_F030R8 -c -I../Inc -I"C:/MKSCV01/MKSCV01/cv02/CMSIS/Device/ST/STM32F0xx/Include" -I"C:/MKSCV01/MKSCV01/cv02/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DSTM32F030R8Tx -DSTM32 -DSTM32F0 -DNUCLEO_F030R8 -c -I../Inc -I"C:/MKSCV01/MKSCV01/cv02/CMSIS/Device/ST/STM32F0xx/Include" -I"C:/MKSCV01/MKSCV01/cv02/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc "../Src/system_stm32f0xx.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DSTM32F030R8Tx -DSTM32 -DSTM32F0 -DNUCLEO_F030R8 -c -I../Inc -I"C:/MKSCV01/MKSCV01/cv02/CMSIS/Device/ST/STM32F0xx/Include" -I"C:/MKSCV01/MKSCV01/cv02/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/system_stm32f0xx.d" -MT"Src/system_stm32f0xx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/system_stm32f0xx.o"
+../Src/main.c: In function 'EXTI0_1_IRQHandler':
+../Src/main.c:34:12: error: expected identifier before '...' token
+   34 |     GPIOB->.............;
+      |            ^~~
+../Src/main.c: In function 'blikac':
+../Src/main.c:24:24: error: invalid suffix "ms" on integer constant
+   24 | #define LED_TIME_BLINK 300ms
+      |                        ^~~~~
+../Src/main.c:47:22: note: in expansion of macro 'LED_TIME_BLINK'
+   47 |   if (Tick > delay + LED_TIME_BLINK) {
+      |                      ^~~~~~~~~~~~~~
+../Src/main.c: In function 'main':
+../Src/main.c:55:38: error: 'RCC_' undeclared (first use in this function); did you mean 'RCC'?
+   55 |  RCC->AHBENR |= RCC_AHBENR_GPIOAEN | RCC_.............. | RCC_..............; // enable
+      |                                      ^~~~
+      |                                      RCC
+../Src/main.c:55:38: note: each undeclared identifier is reported only once for each function it appears in
+../Src/main.c:55:42: error: expected ';' before '...' token
+   55 |  RCC->AHBENR |= RCC_AHBENR_GPIOAEN | RCC_.............. | RCC_..............; // enable
+      |                                          ^~~
+      |                                          ;
+../Src/main.c:57:18: error: 'GPIO_' undeclared (first use in this function); did you mean 'GPIOC'?
+   57 |  GPIOB->MODER |= GPIO_..............; // LED2 = PB0, output
+      |                  ^~~~~
+      |                  GPIOC
+../Src/main.c:57:23: error: expected ';' before '...' token
+   57 |  GPIOB->MODER |= GPIO_..............; // LED2 = PB0, output
+      |                       ^~~
+      |                       ;
+../Src/main.c:59:23: error: expected ';' before '...' token
+   59 |  GPIOC->PUPDR |= GPIO_..............; // S1 = PC1, pullup
+      |                       ^~~
+      |                       ;
+make: *** [Src/subdir.mk:28: Src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+11:24:34 **** Incremental Build of configuration Debug for project cv02 ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DSTM32F030R8Tx -DSTM32 -DSTM32F0 -DNUCLEO_F030R8 -c -I../Inc -I"C:/MKSCV01/MKSCV01/cv02/CMSIS/Device/ST/STM32F0xx/Include" -I"C:/MKSCV01/MKSCV01/cv02/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'EXTI0_1_IRQHandler':
+../Src/main.c:34:12: error: expected identifier before '...' token
+   34 |     GPIOB->.............;
+      |            ^~~
+../Src/main.c: In function 'main':
+../Src/main.c:55:38: error: 'RCC_' undeclared (first use in this function); did you mean 'RCC'?
+   55 |  RCC->AHBENR |= RCC_AHBENR_GPIOAEN | RCC_.............. | RCC_..............; // enable
+      |                                      ^~~~
+      |                                      RCC
+../Src/main.c:55:38: note: each undeclared identifier is reported only once for each function it appears in
+../Src/main.c:55:42: error: expected ';' before '...' token
+   55 |  RCC->AHBENR |= RCC_AHBENR_GPIOAEN | RCC_.............. | RCC_..............; // enable
+      |                                          ^~~
+      |                                          ;
+../Src/main.c:57:18: error: 'GPIO_' undeclared (first use in this function); did you mean 'GPIOC'?
+   57 |  GPIOB->MODER |= GPIO_..............; // LED2 = PB0, output
+      |                  ^~~~~
+      |                  GPIOC
+../Src/main.c:57:23: error: expected ';' before '...' token
+   57 |  GPIOB->MODER |= GPIO_..............; // LED2 = PB0, output
+      |                       ^~~
+      |                       ;
+../Src/main.c:59:23: error: expected ';' before '...' token
+   59 |  GPIOC->PUPDR |= GPIO_..............; // S1 = PC1, pullup
+      |                       ^~~
+      |                       ;
+make: *** [Src/subdir.mk:28: Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+11:31:14 **** Incremental Build of configuration Debug for project cv02 ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DSTM32F030R8Tx -DSTM32 -DSTM32F0 -DNUCLEO_F030R8 -c -I../Inc -I"C:/MKSCV01/MKSCV01/cv02/CMSIS/Device/ST/STM32F0xx/Include" -I"C:/MKSCV01/MKSCV01/cv02/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:55:38: error: 'RCC_' undeclared (first use in this function); did you mean 'RCC'?
+   55 |  RCC->AHBENR |= RCC_AHBENR_GPIOAEN | RCC_.............. | RCC_..............; // enable
+      |                                      ^~~~
+      |                                      RCC
+../Src/main.c:55:38: note: each undeclared identifier is reported only once for each function it appears in
+../Src/main.c:55:42: error: expected ';' before '...' token
+   55 |  RCC->AHBENR |= RCC_AHBENR_GPIOAEN | RCC_.............. | RCC_..............; // enable
+      |                                          ^~~
+      |                                          ;
+../Src/main.c:57:18: error: 'GPIO_' undeclared (first use in this function); did you mean 'GPIOC'?
+   57 |  GPIOB->MODER |= GPIO_..............; // LED2 = PB0, output
+      |                  ^~~~~
+      |                  GPIOC
+../Src/main.c:57:23: error: expected ';' before '...' token
+   57 |  GPIOB->MODER |= GPIO_..............; // LED2 = PB0, output
+      |                       ^~~
+      |                       ;
+../Src/main.c:59:23: error: expected ';' before '...' token
+   59 |  GPIOC->PUPDR |= GPIO_..............; // S1 = PC1, pullup
+      |                       ^~~
+      |                       ;
+make: *** [Src/subdir.mk:28: Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+11:33:04 **** Incremental Build of configuration Debug for project cv02 ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DSTM32F030R8Tx -DSTM32 -DSTM32F0 -DNUCLEO_F030R8 -c -I../Inc -I"C:/MKSCV01/MKSCV01/cv02/CMSIS/Device/ST/STM32F0xx/Include" -I"C:/MKSCV01/MKSCV01/cv02/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:57:18: error: 'GPIO_' undeclared (first use in this function); did you mean 'GPIOC'?
+   57 |  GPIOB->MODER |= GPIO_..............; // LED2 = PB0, output
+      |                  ^~~~~
+      |                  GPIOC
+../Src/main.c:57:18: note: each undeclared identifier is reported only once for each function it appears in
+../Src/main.c:57:23: error: expected ';' before '...' token
+   57 |  GPIOB->MODER |= GPIO_..............; // LED2 = PB0, output
+      |                       ^~~
+      |                       ;
+../Src/main.c:59:23: error: expected ';' before '...' token
+   59 |  GPIOC->PUPDR |= GPIO_..............; // S1 = PC1, pullup
+      |                       ^~~
+      |                       ;
+make: *** [Src/subdir.mk:28: Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+11:33:59 **** Incremental Build of configuration Debug for project cv02 ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DSTM32F030R8Tx -DSTM32 -DSTM32F0 -DNUCLEO_F030R8 -c -I../Inc -I"C:/MKSCV01/MKSCV01/cv02/CMSIS/Device/ST/STM32F0xx/Include" -I"C:/MKSCV01/MKSCV01/cv02/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "cv02.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\MKSCV01\MKSCV01\cv02\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cv02.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cv02.elf
+ 
+arm-none-eabi-size   cv02.elf 
+arm-none-eabi-objdump -h -S  cv02.elf  > "cv02.list"
+arm-none-eabi-objcopy  -O binary  cv02.elf  "cv02.bin"
+   text	   data	    bss	    dec	    hex	filename
+   1216	      8	   1576	   2800	    af0	cv02.elf
+Finished building: default.size.stdout
+ 
+Finished building: cv02.list
+Finished building: cv02.bin
+ 
+ 
+11:45:32 **** Incremental Build of configuration Debug for project cv02 ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DSTM32F030R8Tx -DSTM32 -DSTM32F0 -DNUCLEO_F030R8 -c -I../Inc -I"C:/MKSCV01/MKSCV01/cv02/CMSIS/Device/ST/STM32F0xx/Include" -I"C:/MKSCV01/MKSCV01/cv02/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'tlacitka':
+../Src/main.c:60:25: error: 'BUTTON_DEBOUNCE' undeclared (first use in this function); did you mean 'BUTTON_BOUNCE'?
+   60 |  if (Tick > debounce1 + BUTTON_DEBOUNCE) {
+      |                         ^~~~~~~~~~~~~~~
+      |                         BUTTON_BOUNCE
+../Src/main.c:60:25: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [Src/subdir.mk:28: Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+11:46:08 **** Incremental Build of configuration Debug for project cv02 ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DSTM32F030R8Tx -DSTM32 -DSTM32F0 -DNUCLEO_F030R8 -c -I../Inc -I"C:/MKSCV01/MKSCV01/cv02/CMSIS/Device/ST/STM32F0xx/Include" -I"C:/MKSCV01/MKSCV01/cv02/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "cv02.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\MKSCV01\MKSCV01\cv02\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cv02.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cv02.elf
+ 
+arm-none-eabi-size   cv02.elf 
+arm-none-eabi-objdump -h -S  cv02.elf  > "cv02.list"
+arm-none-eabi-objcopy  -O binary  cv02.elf  "cv02.bin"
+   text	   data	    bss	    dec	    hex	filename
+   1340	      8	   1584	   2932	    b74	cv02.elf
+Finished building: default.size.stdout
+ 
+Finished building: cv02.bin
+Finished building: cv02.list
+ 
+ 
+11:56:33 **** Incremental Build of configuration Debug for project cv02 ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DSTM32F030R8Tx -DSTM32 -DSTM32F0 -DNUCLEO_F030R8 -c -I../Inc -I"C:/MKSCV01/MKSCV01/cv02/CMSIS/Device/ST/STM32F0xx/Include" -I"C:/MKSCV01/MKSCV01/cv02/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'tlacitka':
+../Src/main.c:77:9: error: 'old_s1' undeclared (first use in this function); did you mean 'old_s2'?
+   77 |     if (old_s1 && !new_s1) { // falling edge
+      |         ^~~~~~
+      |         old_s2
+../Src/main.c:77:9: note: each undeclared identifier is reported only once for each function it appears in
+../Src/main.c:78:24: error: 'LED_TIME_LONG' undeclared (first use in this function); did you mean 'LED_TIME_BLINK'?
+   78 |      off_time = Tick + LED_TIME_LONG;
+      |                        ^~~~~~~~~~~~~
+      |                        LED_TIME_BLINK
+../Src/main.c:74:20: warning: unused variable 'old_s2' [-Wunused-variable]
+   74 |    static uint32_t old_s2;
+      |                    ^~~~~~
+At top level:
+../Src/main.c:74:20: warning: 'old_s2' defined but not used [-Wunused-variable]
+make: *** [Src/subdir.mk:28: Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+11:58:13 **** Incremental Build of configuration Debug for project cv02 ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DSTM32F030R8Tx -DSTM32 -DSTM32F0 -DNUCLEO_F030R8 -c -I../Inc -I"C:/MKSCV01/MKSCV01/cv02/CMSIS/Device/ST/STM32F0xx/Include" -I"C:/MKSCV01/MKSCV01/cv02/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'tlacitka':
+../Src/main.c:78:24: error: 'LED_TIME_LONG' undeclared (first use in this function); did you mean 'LED_TIME_BLINK'?
+   78 |      off_time = Tick + LED_TIME_LONG;
+      |                        ^~~~~~~~~~~~~
+      |                        LED_TIME_BLINK
+../Src/main.c:78:24: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [Src/subdir.mk:28: Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+11:58:43 **** Incremental Build of configuration Debug for project cv02 ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DSTM32F030R8Tx -DSTM32 -DSTM32F0 -DNUCLEO_F030R8 -c -I../Inc -I"C:/MKSCV01/MKSCV01/cv02/CMSIS/Device/ST/STM32F0xx/Include" -I"C:/MKSCV01/MKSCV01/cv02/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "cv02.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\MKSCV01\MKSCV01\cv02\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cv02.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cv02.elf
+ 
+arm-none-eabi-size   cv02.elf 
+arm-none-eabi-objdump -h -S  cv02.elf  > "cv02.list"
+arm-none-eabi-objcopy  -O binary  cv02.elf  "cv02.bin"
+   text	   data	    bss	    dec	    hex	filename
+   1428	      8	   1592	   3028	    bd4	cv02.elf
+Finished building: default.size.stdout
+ 
+Finished building: cv02.bin
+Finished building: cv02.list
+ 
+ 
+12:10:03 **** Incremental Build of configuration Debug for project cv02 ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DSTM32F030R8Tx -DSTM32 -DSTM32F0 -DNUCLEO_F030R8 -c -I../Inc -I"C:/MKSCV01/MKSCV01/cv02/CMSIS/Device/ST/STM32F0xx/Include" -I"C:/MKSCV01/MKSCV01/cv02/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'tlacitka':
+../Src/main.c:99:5: warning: 'main' is normally a non-static function [-Wmain]
+   99 | int main(void)
+      |     ^~~~
+../Src/main.c:121:1: error: expected declaration or statement at end of input
+  121 | }
+      | ^
+At top level:
+../Src/main.c:99:5: warning: 'main' defined but not used [-Wunused-function]
+   99 | int main(void)
+      |     ^~~~
+make: *** [Src/subdir.mk:28: Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+12:10:59 **** Incremental Build of configuration Debug for project cv02 ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DSTM32F030R8Tx -DSTM32 -DSTM32F0 -DNUCLEO_F030R8 -c -I../Inc -I"C:/MKSCV01/MKSCV01/cv02/CMSIS/Device/ST/STM32F0xx/Include" -I"C:/MKSCV01/MKSCV01/cv02/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "cv02.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\MKSCV01\MKSCV01\cv02\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cv02.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cv02.elf
+ 
+arm-none-eabi-size   cv02.elf 
+arm-none-eabi-objdump -h -S  cv02.elf  > "cv02.list"
+arm-none-eabi-objcopy  -O binary  cv02.elf  "cv02.bin"
+   text	   data	    bss	    dec	    hex	filename
+   1520	     12	   1596	   3128	    c38	cv02.elf
+Finished building: default.size.stdout
+ 
+Finished building: cv02.bin
+Finished building: cv02.list
+ 
+ 

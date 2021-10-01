@@ -1,0 +1,20 @@
+21:08:44 **** Incremental Build of configuration Debug for project cv01 ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DSTM32F030R8Tx -DSTM32 -DSTM32F0 -DNUCLEO_F030R8 -c -I../Inc -I"C:/MKSCV01/MKSCV01/cv01/CMSIS/Device/ST/STM32F0xx/Include" -I"C:/MKSCV01/MKSCV01/cv01/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "cv01.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\MKSCV01\MKSCV01\cv01\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cv01.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cv01.elf
+ 
+arm-none-eabi-size   cv01.elf 
+arm-none-eabi-objdump -h -S  cv01.elf  > "cv01.list"
+arm-none-eabi-objcopy  -O binary  cv01.elf  "cv01.bin"
+   text	   data	    bss	    dec	    hex	filename
+    724	      8	   1568	   2300	    8fc	cv01.elf
+Finished building: default.size.stdout
+ 
+Finished building: cv01.list
+Finished building: cv01.bin
+ 
+ 
+
+21:08:45 Build Finished. 0 errors, 0 warnings. (took 930ms)
+
