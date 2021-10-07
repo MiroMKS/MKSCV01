@@ -8,10 +8,10 @@
 #include "sct.h"
 
 #define sct_nla(x) do { if (x) GPIOB->BSRR = (1 << 5); else GPIOB->BRR = (1 << 5); } while (0)
-#define sct_sdi(x) do { if (x) GPIOB->BSRR = (1 << 5); else GPIOB->BRR = (1 << 5); } while (0)
-#define sct_clk(x) do { if (x) GPIOB->BSRR = (1 << 5); else GPIOB->BRR = (1 << 5); } while (0)
-#define sct_noe(x) do { if (x) GPIOB->BSRR = (1 << 5); else GPIOB->BRR = (1 << 5); } while (0)
-#define sct_value(x)
+#define sct_sdi(x) do { if (x) GPIOB->BSRR = (1 << 5); else GPIOB->BRR = (1 << 4); } while (0)
+#define sct_clk(x) do { if (x) GPIOB->BSRR = (1 << 5); else GPIOB->BRR = (1 << 3); } while (0)
+#define sct_noe(x) do { if (x) GPIOB->BSRR = (1 << 5); else GPIOB->BRR = (1 << 10); } while (0)
+
 
 void sct_led(uint32_t value)
 {
@@ -83,5 +83,5 @@ void sct_value(uint16_t value)
 	reg |= reg_values[1][value / 10 % 10];
 	reg |= reg_values[2][value / 1 % 10];
 
-	sct_led(leg);
+	sct_led(reg);
 }

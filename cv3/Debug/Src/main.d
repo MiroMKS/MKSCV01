@@ -5,7 +5,7 @@ Src/main.o: ../Src/main.c \
  C:/MKSCV01/MKSCV01/cv3/CMSIS/Include/core_cmInstr.h \
  C:/MKSCV01/MKSCV01/cv3/CMSIS/Include/core_cmFunc.h \
  C:/MKSCV01/MKSCV01/cv3/CMSIS/Device/ST/STM32F0xx/Include/system_stm32f0xx.h \
- ../Src/sct.h
+ ../Inc/sct.h
 
 C:/MKSCV01/MKSCV01/cv3/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h:
 
@@ -19,4 +19,4 @@ C:/MKSCV01/MKSCV01/cv3/CMSIS/Include/core_cmFunc.h:
 
 C:/MKSCV01/MKSCV01/cv3/CMSIS/Device/ST/STM32F0xx/Include/system_stm32f0xx.h:
 
-../Src/sct.h:
+../Inc/sct.h:
