@@ -243,3 +243,364 @@ Finished building: cv02.bin
 Finished building: cv02.list
  
  
+15:40:31 **** Build of configuration Debug for project cv3 ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DSTM32F030R8Tx -DSTM32 -DSTM32F0 -DNUCLEO_F030R8 -c -I../Inc -I"C:/MKSCV01/MKSCV01/cv3/CMSIS/Device/ST/STM32F0xx/Include" -I"C:/MKSCV01/MKSCV01/cv3/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DSTM32F030R8Tx -DSTM32 -DSTM32F0 -DNUCLEO_F030R8 -c -I../Inc -I"C:/MKSCV01/MKSCV01/cv3/CMSIS/Device/ST/STM32F0xx/Include" -I"C:/MKSCV01/MKSCV01/cv3/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DSTM32F030R8Tx -DSTM32 -DSTM32F0 -DNUCLEO_F030R8 -c -I../Inc -I"C:/MKSCV01/MKSCV01/cv3/CMSIS/Device/ST/STM32F0xx/Include" -I"C:/MKSCV01/MKSCV01/cv3/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc "../Src/system_stm32f0xx.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DSTM32F030R8Tx -DSTM32 -DSTM32F0 -DNUCLEO_F030R8 -c -I../Inc -I"C:/MKSCV01/MKSCV01/cv3/CMSIS/Device/ST/STM32F0xx/Include" -I"C:/MKSCV01/MKSCV01/cv3/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/system_stm32f0xx.d" -MT"Src/system_stm32f0xx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/system_stm32f0xx.o"
+arm-none-eabi-gcc -o "cv3.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\MKSCV01\MKSCV01\cv3\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cv3.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cv3.elf
+ 
+arm-none-eabi-size   cv3.elf 
+arm-none-eabi-objdump -h -S  cv3.elf  > "cv3.list"
+arm-none-eabi-objcopy  -O binary  cv3.elf  "cv3.bin"
+   text	   data	    bss	    dec	    hex	filename
+    588	      8	   1568	   2164	    874	cv3.elf
+Finished building: default.size.stdout
+ 
+Finished building: cv3.list
+Finished building: cv3.bin
+ 
+ 
+16:08:54 **** Incremental Build of configuration Debug for project cv3 ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DSTM32F030R8Tx -DSTM32 -DSTM32F0 -DNUCLEO_F030R8 -c -I../Inc -I"C:/MKSCV01/MKSCV01/cv3/CMSIS/Device/ST/STM32F0xx/Include" -I"C:/MKSCV01/MKSCV01/cv3/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/sct.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DSTM32F030R8Tx -DSTM32 -DSTM32F0 -DNUCLEO_F030R8 -c -I../Inc -I"C:/MKSCV01/MKSCV01/cv3/CMSIS/Device/ST/STM32F0xx/Include" -I"C:/MKSCV01/MKSCV01/cv3/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/sct.d" -MT"Src/sct.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/sct.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DSTM32F030R8Tx -DSTM32 -DSTM32F0 -DNUCLEO_F030R8 -c -I../Inc -I"C:/MKSCV01/MKSCV01/cv3/CMSIS/Device/ST/STM32F0xx/Include" -I"C:/MKSCV01/MKSCV01/cv3/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DSTM32F030R8Tx -DSTM32 -DSTM32F0 -DNUCLEO_F030R8 -c -I../Inc -I"C:/MKSCV01/MKSCV01/cv3/CMSIS/Device/ST/STM32F0xx/Include" -I"C:/MKSCV01/MKSCV01/cv3/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/sysmem.o"
+../Src/sct.c: In function 'sct_led':
+../Src/sct.c:14:3: warning: implicit declaration of function 'sct_sdi' [-Wimplicit-function-declaration]
+   14 |   sct_sdi(value & 1);
+      |   ^~~~~~~
+../Src/sct.c:16:3: warning: implicit declaration of function 'sct_clk'; did you mean 'sct_nla'? [-Wimplicit-function-declaration]
+   16 |   sct_clk(1);
+      |   ^~~~~~~
+      |   sct_nla
+../Src/sct.c: At top level:
+../Src/sct.c:22:1: error: expected identifier or '(' before '}' token
+   22 | }
+      | ^
+In file included from C:/MKSCV01/MKSCV01/cv3/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h:130,
+                 from ../Src/sct.c:7:
+../Src/sct.c: In function 'sct_init':
+C:/MKSCV01/MKSCV01/cv3/CMSIS/Device/ST/STM32F0xx/Include/stm32f030x8.h:544:29: error: expected identifier before '(' token
+  544 | #define GPIOB               ((GPIO_TypeDef *) GPIOB_BASE)
+      |                             ^
+../Src/sct.c:27:2: note: in expansion of macro 'GPIOB'
+   27 |  GPIOB->
+      |  ^~~~~
+make: *** [Src/subdir.mk:31: Src/sct.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+16:09:12 **** Incremental Build of configuration Debug for project cv3 ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/sct.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DSTM32F030R8Tx -DSTM32 -DSTM32F0 -DNUCLEO_F030R8 -c -I../Inc -I"C:/MKSCV01/MKSCV01/cv3/CMSIS/Device/ST/STM32F0xx/Include" -I"C:/MKSCV01/MKSCV01/cv3/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/sct.d" -MT"Src/sct.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/sct.o"
+arm-none-eabi-gcc "../Src/system_stm32f0xx.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DSTM32F030R8Tx -DSTM32 -DSTM32F0 -DNUCLEO_F030R8 -c -I../Inc -I"C:/MKSCV01/MKSCV01/cv3/CMSIS/Device/ST/STM32F0xx/Include" -I"C:/MKSCV01/MKSCV01/cv3/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/system_stm32f0xx.d" -MT"Src/system_stm32f0xx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/system_stm32f0xx.o"
+../Src/sct.c: In function 'sct_led':
+../Src/sct.c:14:3: warning: implicit declaration of function 'sct_sdi' [-Wimplicit-function-declaration]
+   14 |   sct_sdi(value & 1);
+      |   ^~~~~~~
+../Src/sct.c:16:3: warning: implicit declaration of function 'sct_clk'; did you mean 'sct_nla'? [-Wimplicit-function-declaration]
+   16 |   sct_clk(1);
+      |   ^~~~~~~
+      |   sct_nla
+In file included from C:/MKSCV01/MKSCV01/cv3/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h:130,
+                 from ../Src/sct.c:7:
+../Src/sct.c: In function 'sct_init':
+C:/MKSCV01/MKSCV01/cv3/CMSIS/Device/ST/STM32F0xx/Include/stm32f030x8.h:544:29: error: expected identifier before '(' token
+  544 | #define GPIOB               ((GPIO_TypeDef *) GPIOB_BASE)
+      |                             ^
+../Src/sct.c:26:2: note: in expansion of macro 'GPIOB'
+   26 |  GPIOB->
+      |  ^~~~~
+make: *** [Src/subdir.mk:31: Src/sct.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+16:09:45 **** Incremental Build of configuration Debug for project cv3 ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/sct.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DSTM32F030R8Tx -DSTM32 -DSTM32F0 -DNUCLEO_F030R8 -c -I../Inc -I"C:/MKSCV01/MKSCV01/cv3/CMSIS/Device/ST/STM32F0xx/Include" -I"C:/MKSCV01/MKSCV01/cv3/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/sct.d" -MT"Src/sct.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/sct.o"
+../Src/sct.c: In function 'sct_led':
+../Src/sct.c:14:3: warning: implicit declaration of function 'sct_sdi' [-Wimplicit-function-declaration]
+   14 |   sct_sdi(value & 1);
+      |   ^~~~~~~
+../Src/sct.c:16:3: warning: implicit declaration of function 'sct_clk'; did you mean 'sct_nla'? [-Wimplicit-function-declaration]
+   16 |   sct_clk(1);
+      |   ^~~~~~~
+      |   sct_nla
+In file included from C:/MKSCV01/MKSCV01/cv3/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h:130,
+                 from ../Src/sct.c:7:
+../Src/sct.c: In function 'sct_init':
+C:/MKSCV01/MKSCV01/cv3/CMSIS/Device/ST/STM32F0xx/Include/stm32f030x8.h:544:29: error: expected identifier before '(' token
+  544 | #define GPIOB               ((GPIO_TypeDef *) GPIOB_BASE)
+      |                             ^
+../Src/sct.c:26:2: note: in expansion of macro 'GPIOB'
+   26 |  GPIOB->
+      |  ^~~~~
+../Src/sct.c: At top level:
+../Src/sct.c:30:1: error: expected identifier or '(' before '}' token
+   30 | }
+      | ^
+make: *** [Src/subdir.mk:31: Src/sct.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+16:10:29 **** Incremental Build of configuration Debug for project cv3 ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/sct.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DSTM32F030R8Tx -DSTM32 -DSTM32F0 -DNUCLEO_F030R8 -c -I../Inc -I"C:/MKSCV01/MKSCV01/cv3/CMSIS/Device/ST/STM32F0xx/Include" -I"C:/MKSCV01/MKSCV01/cv3/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/sct.d" -MT"Src/sct.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/sct.o"
+../Src/sct.c: In function 'sct_led':
+../Src/sct.c:14:3: warning: implicit declaration of function 'sct_sdi' [-Wimplicit-function-declaration]
+   14 |   sct_sdi(value & 1);
+      |   ^~~~~~~
+../Src/sct.c:16:3: warning: implicit declaration of function 'sct_clk'; did you mean 'sct_nla'? [-Wimplicit-function-declaration]
+   16 |   sct_clk(1);
+      |   ^~~~~~~
+      |   sct_nla
+In file included from C:/MKSCV01/MKSCV01/cv3/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h:130,
+                 from ../Src/sct.c:7:
+../Src/sct.c: In function 'sct_init':
+C:/MKSCV01/MKSCV01/cv3/CMSIS/Device/ST/STM32F0xx/Include/stm32f030x8.h:544:29: error: expected identifier before '(' token
+  544 | #define GPIOB               ((GPIO_TypeDef *) GPIOB_BASE)
+      |                             ^
+../Src/sct.c:26:2: note: in expansion of macro 'GPIOB'
+   26 |  GPIOB->
+      |  ^~~~~
+../Src/sct.c: At top level:
+../Src/sct.c:30:1: error: expected identifier or '(' before '}' token
+   30 | }
+      | ^
+make: *** [Src/subdir.mk:31: Src/sct.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+16:17:04 **** Incremental Build of configuration Debug for project cv3 ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/sct.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DSTM32F030R8Tx -DSTM32 -DSTM32F0 -DNUCLEO_F030R8 -c -I../Inc -I"C:/MKSCV01/MKSCV01/cv3/CMSIS/Device/ST/STM32F0xx/Include" -I"C:/MKSCV01/MKSCV01/cv3/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/sct.d" -MT"Src/sct.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/sct.o"
+../Src/sct.c: In function 'sct_led':
+../Src/sct.c:14:3: warning: implicit declaration of function 'sct_sdi' [-Wimplicit-function-declaration]
+   14 |   sct_sdi(value & 1);
+      |   ^~~~~~~
+../Src/sct.c:16:3: warning: implicit declaration of function 'sct_clk'; did you mean 'sct_nla'? [-Wimplicit-function-declaration]
+   16 |   sct_clk(1);
+      |   ^~~~~~~
+      |   sct_nla
+../Src/sct.c: In function 'sct_init':
+../Src/sct.c:27:2: warning: implicit declaration of function 'sct_noe'; did you mean 'sct_nla'? [-Wimplicit-function-declaration]
+   27 |  sct_noe(0);
+      |  ^~~~~~~
+      |  sct_nla
+arm-none-eabi-gcc -o "cv3.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\MKSCV01\MKSCV01\cv3\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cv3.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+c:\st\stm32cubeide_1.7.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_2.0.0.202105311346\tools\arm-none-eabi\bin\ld.exe: ./Src/sct.o: in function `sct_led':
+C:/MKSCV01/MKSCV01/cv3/Debug/../Src/sct.c:14: undefined reference to `sct_sdi'
+c:\st\stm32cubeide_1.7.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_2.0.0.202105311346\tools\arm-none-eabi\bin\ld.exe: C:/MKSCV01/MKSCV01/cv3/Debug/../Src/sct.c:16: undefined reference to `sct_clk'
+c:\st\stm32cubeide_1.7.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_2.0.0.202105311346\tools\arm-none-eabi\bin\ld.exe: C:/MKSCV01/MKSCV01/cv3/Debug/../Src/sct.c:17: undefined reference to `sct_clk'
+c:\st\stm32cubeide_1.7.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_2.0.0.202105311346\tools\arm-none-eabi\bin\ld.exe: ./Src/sct.o: in function `sct_init':
+C:/MKSCV01/MKSCV01/cv3/Debug/../Src/sct.c:27: undefined reference to `sct_noe'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:64: cv3.elf] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+16:20:43 **** Incremental Build of configuration Debug for project cv3 ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/sct.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DSTM32F030R8Tx -DSTM32 -DSTM32F0 -DNUCLEO_F030R8 -c -I../Inc -I"C:/MKSCV01/MKSCV01/cv3/CMSIS/Device/ST/STM32F0xx/Include" -I"C:/MKSCV01/MKSCV01/cv3/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/sct.d" -MT"Src/sct.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/sct.o"
+arm-none-eabi-gcc -o "cv3.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\MKSCV01\MKSCV01\cv3\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cv3.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cv3.elf
+ 
+arm-none-eabi-size   cv3.elf 
+arm-none-eabi-objdump -h -S  cv3.elf  > "cv3.list"
+arm-none-eabi-objcopy  -O binary  cv3.elf  "cv3.bin"
+   text	   data	    bss	    dec	    hex	filename
+    768	      8	   1568	   2344	    928	cv3.elf
+Finished building: default.size.stdout
+ 
+Finished building: cv3.list
+Finished building: cv3.bin
+ 
+ 
+16:33:35 **** Incremental Build of configuration Debug for project cv3 ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DSTM32F030R8Tx -DSTM32 -DSTM32F0 -DNUCLEO_F030R8 -c -I../Inc -I"C:/MKSCV01/MKSCV01/cv3/CMSIS/Device/ST/STM32F0xx/Include" -I"C:/MKSCV01/MKSCV01/cv3/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/sct.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DSTM32F030R8Tx -DSTM32 -DSTM32F0 -DNUCLEO_F030R8 -c -I../Inc -I"C:/MKSCV01/MKSCV01/cv3/CMSIS/Device/ST/STM32F0xx/Include" -I"C:/MKSCV01/MKSCV01/cv3/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/sct.d" -MT"Src/sct.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/sct.o"
+../Src/sct.c: In function 'sct_value':
+../Src/sct.c:35:16: error: parameter name omitted
+   35 | void sct_value(uint16_t)
+      |                ^~~~~~~~
+../Src/sct.c:81:23: error: 'value' undeclared (first use in this function)
+   81 |  reg |= reg_values[0][value / 100 % 10];
+      |                       ^~~~~
+../Src/sct.c:81:23: note: each undeclared identifier is reported only once for each function it appears in
+../Src/sct.c:85:10: error: 'leg' undeclared (first use in this function); did you mean 'reg'?
+   85 |  sct_led(leg);
+      |          ^~~
+      |          reg
+../Src/sct.c:79:11: warning: variable 'reg' set but not used [-Wunused-but-set-variable]
+   79 |  uint32_t reg = 0;
+      |           ^~~
+../Src/sct.c:37:24: warning: variable 'reg_values' set but not used [-Wunused-but-set-variable]
+   37 |  static const uint32_t reg_values[3][10] = {
+      |                        ^~~~~~~~~~
+make: *** [Src/subdir.mk:31: Src/sct.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+16:34:39 **** Incremental Build of configuration Debug for project cv3 ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/sct.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DSTM32F030R8Tx -DSTM32 -DSTM32F0 -DNUCLEO_F030R8 -c -I../Inc -I"C:/MKSCV01/MKSCV01/cv3/CMSIS/Device/ST/STM32F0xx/Include" -I"C:/MKSCV01/MKSCV01/cv3/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/sct.d" -MT"Src/sct.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/sct.o"
+../Src/sct.c:14:22: error: expected identifier or '(' before 'do'
+   14 | #define sct_value(x) do { if (x) GPIOB->BSRR = (1 << 5); else GPIOB->BRR = (1 << 5); } while (0)
+      |                      ^~
+../Src/sct.c:36:6: note: in expansion of macro 'sct_value'
+   36 | void sct_value(uint16_t)
+      |      ^~~~~~~~~
+../Src/sct.c:14:88: error: expected identifier or '(' before 'while'
+   14 | #define sct_value(x) do { if (x) GPIOB->BSRR = (1 << 5); else GPIOB->BRR = (1 << 5); } while (0)
+      |                                                                                        ^~~~~
+../Src/sct.c:36:6: note: in expansion of macro 'sct_value'
+   36 | void sct_value(uint16_t)
+      |      ^~~~~~~~~
+make: *** [Src/subdir.mk:31: Src/sct.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+16:36:48 **** Incremental Build of configuration Debug for project cv3 ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/sct.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DSTM32F030R8Tx -DSTM32 -DSTM32F0 -DNUCLEO_F030R8 -c -I../Inc -I"C:/MKSCV01/MKSCV01/cv3/CMSIS/Device/ST/STM32F0xx/Include" -I"C:/MKSCV01/MKSCV01/cv3/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/sct.d" -MT"Src/sct.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/sct.o"
+../Src/sct.c:14:22: error: expected identifier or '(' before 'do'
+   14 | #define sct_value(x) do { if (x) GPIOB->BSRR = (1 << 5); else GPIOB->BRR = (1 << 5); } while (0)
+      |                      ^~
+../Src/sct.c:36:6: note: in expansion of macro 'sct_value'
+   36 | void sct_value(uint16_t);
+      |      ^~~~~~~~~
+../Src/sct.c:14:88: error: expected identifier or '(' before 'while'
+   14 | #define sct_value(x) do { if (x) GPIOB->BSRR = (1 << 5); else GPIOB->BRR = (1 << 5); } while (0)
+      |                                                                                        ^~~~~
+../Src/sct.c:36:6: note: in expansion of macro 'sct_value'
+   36 | void sct_value(uint16_t);
+      |      ^~~~~~~~~
+../Src/sct.c:37:1: error: expected identifier or '(' before '{' token
+   37 | {
+      | ^
+make: *** [Src/subdir.mk:31: Src/sct.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+16:37:26 **** Incremental Build of configuration Debug for project cv3 ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/sct.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DSTM32F030R8Tx -DSTM32 -DSTM32F0 -DNUCLEO_F030R8 -c -I../Inc -I"C:/MKSCV01/MKSCV01/cv3/CMSIS/Device/ST/STM32F0xx/Include" -I"C:/MKSCV01/MKSCV01/cv3/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/sct.d" -MT"Src/sct.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/sct.o"
+../Src/sct.c:14:22: error: expected identifier or '(' before 'do'
+   14 | #define sct_value(x) do { if (x) GPIOB->BSRR = (1 << 5); else GPIOB->BRR = (1 << 5); } while (0)
+      |                      ^~
+../Src/sct.c:36:6: note: in expansion of macro 'sct_value'
+   36 | void sct_value(uint16_t) {
+      |      ^~~~~~~~~
+../Src/sct.c:14:88: error: expected identifier or '(' before 'while'
+   14 | #define sct_value(x) do { if (x) GPIOB->BSRR = (1 << 5); else GPIOB->BRR = (1 << 5); } while (0)
+      |                                                                                        ^~~~~
+../Src/sct.c:36:6: note: in expansion of macro 'sct_value'
+   36 | void sct_value(uint16_t) {
+      |      ^~~~~~~~~
+make: *** [Src/subdir.mk:31: Src/sct.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+16:39:07 **** Incremental Build of configuration Debug for project cv3 ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/sct.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DSTM32F030R8Tx -DSTM32 -DSTM32F0 -DNUCLEO_F030R8 -c -I../Inc -I"C:/MKSCV01/MKSCV01/cv3/CMSIS/Device/ST/STM32F0xx/Include" -I"C:/MKSCV01/MKSCV01/cv3/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/sct.d" -MT"Src/sct.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/sct.o"
+../Src/sct.c:36:26: error: expected identifier or '(' before '{' token
+   36 | void sct_value(uint16_t) {
+      |                          ^
+make: *** [Src/subdir.mk:31: Src/sct.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+16:39:24 **** Incremental Build of configuration Debug for project cv3 ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/sct.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DSTM32F030R8Tx -DSTM32 -DSTM32F0 -DNUCLEO_F030R8 -c -I../Inc -I"C:/MKSCV01/MKSCV01/cv3/CMSIS/Device/ST/STM32F0xx/Include" -I"C:/MKSCV01/MKSCV01/cv3/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/sct.d" -MT"Src/sct.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/sct.o"
+../Src/sct.c:36:24: error: macro "sct_value" passed 1 arguments, but takes just 0
+   36 | void sct_value(uint16_t) {
+      |                        ^
+../Src/sct.c:14: note: macro "sct_value" defined here
+   14 | #define sct_value()
+      | 
+../Src/sct.c:36:26: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+   36 | void sct_value(uint16_t) {
+      |                          ^
+make: *** [Src/subdir.mk:31: Src/sct.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+16:40:02 **** Incremental Build of configuration Debug for project cv3 ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/sct.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DSTM32F030R8Tx -DSTM32 -DSTM32F0 -DNUCLEO_F030R8 -c -I../Inc -I"C:/MKSCV01/MKSCV01/cv3/CMSIS/Device/ST/STM32F0xx/Include" -I"C:/MKSCV01/MKSCV01/cv3/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/sct.d" -MT"Src/sct.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/sct.o"
+../Src/sct.c:36:26: error: expected identifier or '(' before '{' token
+   36 | void sct_value(uint16_t) {
+      |                          ^
+make: *** [Src/subdir.mk:31: Src/sct.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+16:45:39 **** Incremental Build of configuration Debug for project cv3 ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/sct.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DSTM32F030R8Tx -DSTM32 -DSTM32F0 -DNUCLEO_F030R8 -c -I../Inc -I"C:/MKSCV01/MKSCV01/cv3/CMSIS/Device/ST/STM32F0xx/Include" -I"C:/MKSCV01/MKSCV01/cv3/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/sct.d" -MT"Src/sct.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/sct.o"
+../Src/sct.c:14:19: error: expected parameter name, found ">>"
+   14 | #define sct_value(>>16)
+      |                   ^~
+../Src/sct.c: In function 'sct_value':
+../Src/sct.c:36:16: error: parameter name omitted
+   36 | void sct_value(uint16_t) {
+      |                ^~~~~~~~
+../Src/sct.c:82:23: error: 'value' undeclared (first use in this function)
+   82 |  reg |= reg_values[0][value / 100 % 10];
+      |                       ^~~~~
+../Src/sct.c:82:23: note: each undeclared identifier is reported only once for each function it appears in
+../Src/sct.c:86:10: error: 'leg' undeclared (first use in this function); did you mean 'reg'?
+   86 |  sct_led(leg);
+      |          ^~~
+      |          reg
+../Src/sct.c:80:11: warning: variable 'reg' set but not used [-Wunused-but-set-variable]
+   80 |  uint32_t reg = 0;
+      |           ^~~
+../Src/sct.c:38:24: warning: variable 'reg_values' set but not used [-Wunused-but-set-variable]
+   38 |  static const uint32_t reg_values[3][10] = {
+      |                        ^~~~~~~~~~
+make: *** [Src/subdir.mk:31: Src/sct.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+16:46:10 **** Incremental Build of configuration Debug for project cv3 ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/sct.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DSTM32F030R8Tx -DSTM32 -DSTM32F0 -DNUCLEO_F030R8 -c -I../Inc -I"C:/MKSCV01/MKSCV01/cv3/CMSIS/Device/ST/STM32F0xx/Include" -I"C:/MKSCV01/MKSCV01/cv3/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/sct.d" -MT"Src/sct.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/sct.o"
+../Src/sct.c:36:26: error: expected identifier or '(' before '{' token
+   36 | void sct_value(uint16_t) {
+      |                          ^
+make: *** [Src/subdir.mk:31: Src/sct.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+16:46:51 **** Incremental Build of configuration Debug for project cv3 ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/sct.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DSTM32F030R8Tx -DSTM32 -DSTM32F0 -DNUCLEO_F030R8 -c -I../Inc -I"C:/MKSCV01/MKSCV01/cv3/CMSIS/Device/ST/STM32F0xx/Include" -I"C:/MKSCV01/MKSCV01/cv3/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/sct.d" -MT"Src/sct.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/sct.o"
+../Src/sct.c:36:26: error: expected identifier or '(' before '{' token
+   36 | void sct_value(uint16_t) {
+      |                          ^
+../Src/sct.c:88:1: error: expected identifier or '(' before '}' token
+   88 | }
+      | ^
+make: *** [Src/subdir.mk:31: Src/sct.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+16:47:36 **** Incremental Build of configuration Debug for project cv3 ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/sct.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DSTM32F030R8Tx -DSTM32 -DSTM32F0 -DNUCLEO_F030R8 -c -I../Inc -I"C:/MKSCV01/MKSCV01/cv3/CMSIS/Device/ST/STM32F0xx/Include" -I"C:/MKSCV01/MKSCV01/cv3/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/sct.d" -MT"Src/sct.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/sct.o"
+../Src/sct.c:37:1: error: expected identifier or '(' before '{' token
+   37 | {
+      | ^
+make: *** [Src/subdir.mk:31: Src/sct.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+16:48:04 **** Incremental Build of configuration Debug for project cv3 ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/sct.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DSTM32F030R8Tx -DSTM32 -DSTM32F0 -DNUCLEO_F030R8 -c -I../Inc -I"C:/MKSCV01/MKSCV01/cv3/CMSIS/Device/ST/STM32F0xx/Include" -I"C:/MKSCV01/MKSCV01/cv3/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/sct.d" -MT"Src/sct.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/sct.o"
+../Src/sct.c:37:1: error: expected identifier or '(' before '{' token
+   37 | {
+      | ^
+make: *** [Src/subdir.mk:31: Src/sct.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+16:48:25 **** Incremental Build of configuration Debug for project cv3 ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/sct.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DSTM32F030R8Tx -DSTM32 -DSTM32F0 -DNUCLEO_F030R8 -c -I../Inc -I"C:/MKSCV01/MKSCV01/cv3/CMSIS/Device/ST/STM32F0xx/Include" -I"C:/MKSCV01/MKSCV01/cv3/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/sct.d" -MT"Src/sct.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/sct.o"
+../Src/sct.c:14:28: error: expected ',' or ')', found "value"
+   14 | #define sct_value(uint16_t value)
+      |                            ^~~~~
+../Src/sct.c: In function 'sct_value':
+../Src/sct.c:86:10: error: 'leg' undeclared (first use in this function); did you mean 'reg'?
+   86 |  sct_led(leg);
+      |          ^~~
+      |          reg
+../Src/sct.c:86:10: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [Src/subdir.mk:31: Src/sct.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+16:49:14 **** Incremental Build of configuration Debug for project cv3 ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/sct.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DSTM32F030R8Tx -DSTM32 -DSTM32F0 -DNUCLEO_F030R8 -c -I../Inc -I"C:/MKSCV01/MKSCV01/cv3/CMSIS/Device/ST/STM32F0xx/Include" -I"C:/MKSCV01/MKSCV01/cv3/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/sct.d" -MT"Src/sct.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/sct.o"
+../Src/sct.c:37:1: error: expected identifier or '(' before '{' token
+   37 | {
+      | ^
+make: *** [Src/subdir.mk:31: Src/sct.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
