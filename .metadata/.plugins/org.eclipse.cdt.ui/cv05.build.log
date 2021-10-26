@@ -1,0 +1,43 @@
+12:41:07 **** Incremental Build of configuration Debug for project cv05 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'uart_process_command':
+../Core/Src/main.c:87:29: warning: passing argument 2 of 'strcasecmp' makes pointer from integer without a cast [-Wint-conversion]
+   87 |   if (strcasecmp(token, "ON"== 0))
+      |                         ~~~~^~~~
+      |                             |
+      |                             int
+In file included from c:\st\stm32cubeide_1.7.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_2.0.0.202105311346\tools\arm-none-eabi\include\string.h:24,
+                 from ../Core/Src/main.c:26:
+c:\st\stm32cubeide_1.7.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_2.0.0.202105311346\tools\arm-none-eabi\include\strings.h:67:31: note: expected 'const char *' but argument is of type 'int'
+   67 | int  strcasecmp(const char *, const char *) __pure;
+      |                               ^~~~~~~~~~~~
+../Core/Src/main.c:87:7: warning: null argument where non-null required (argument 2) [-Wnonnull]
+   87 |   if (strcasecmp(token, "ON"== 0))
+      |       ^~~~~~~~~~
+../Core/Src/main.c:89:35: warning: passing argument 2 of 'strcasecmp' makes pointer from integer without a cast [-Wint-conversion]
+   89 |   else if (strcasecmp(token, "OFF"== 0))
+      |                              ~~~~~^~~~
+      |                                   |
+      |                                   int
+In file included from c:\st\stm32cubeide_1.7.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_2.0.0.202105311346\tools\arm-none-eabi\include\string.h:24,
+                 from ../Core/Src/main.c:26:
+c:\st\stm32cubeide_1.7.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_2.0.0.202105311346\tools\arm-none-eabi\include\strings.h:67:31: note: expected 'const char *' but argument is of type 'int'
+   67 | int  strcasecmp(const char *, const char *) __pure;
+      |                               ^~~~~~~~~~~~
+../Core/Src/main.c:89:12: warning: null argument where non-null required (argument 2) [-Wnonnull]
+   89 |   else if (strcasecmp(token, "OFF"== 0))
+      |            ^~~~~~~~~~
+../Core/Src/main.c:132:20: warning: implicit declaration of function 'atoi' [-Wimplicit-function-declaration]
+  132 |    uint16_t addr = atoi(token);
+      |                    ^~~~
+../Core/Src/main.c:161:35: error: 'EEPROM_DUMP_LEN' undeclared (first use in this function); did you mean 'EEPROM_BUFFER_LEN'?
+  161 |     for(uint16_t addr = 0; addr < EEPROM_DUMP_LEN; addr++)
+      |                                   ^~~~~~~~~~~~~~~
+      |                                   EEPROM_BUFFER_LEN
+../Core/Src/main.c:161:35: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+
+12:41:08 Build Failed. 2 errors, 5 warnings. (took 461ms)
+
